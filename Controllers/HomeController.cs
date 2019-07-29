@@ -12,6 +12,7 @@ namespace SchoolApp.Controllers
     {
         public IActionResult Index()
         {
+            // return View("Privacy");
             return View();
         }
 

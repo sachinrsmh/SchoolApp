@@ -1,21 +1,31 @@
-﻿@model SchoolApp.Models.StudentModel
+﻿@model SchoolApp.Models.StaffModel
 
 @{
-    ViewData["Title"] = "Student";
+    ViewData["Title"] = "Staff";
 }
 
-<h2>Student</h2>
+<h2>View</h2>
 
-<h4>View Model</h4>
+<h4>Staff Model</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="Student">
+        <form asp-action="View">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="StudentId" class="control-label"></label>
-                <input asp-for="StudentId" class="form-control" />
-                <span asp-validation-for="StudentId" class="text-danger"></span>
+                <label asp-for="StaffId" class="control-label"></label>
+                <input asp-for="StaffId" class="form-control" />
+                <span asp-validation-for="StaffId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StaffRole" class="control-label"></label>
+                <input asp-for="StaffRole" class="form-control" />
+                <span asp-validation-for="StaffRole" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DateOfJoining" class="control-label"></label>
+                <input asp-for="DateOfJoining" class="form-control" />
+                <span asp-validation-for="DateOfJoining" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="FirstName" class="control-label"></label>
@@ -34,15 +44,8 @@
             </div>
             <div class="form-group">
                 <label asp-for="DateOfBirth" class="control-label"></label>
-                <input asp-for="DateOfBirth" type="date" class="form-control" />
+                <input asp-for="DateOfBirth" class="form-control" />
                 <span asp-validation-for="DateOfBirth" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <div class="checkbox">
-                    <label>
-                        <input asp-for="ShowStudentId" />  @Html.DisplayNameFor(model => model.ShowStudentId);
-                    </label>
-                </div>
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-default" />

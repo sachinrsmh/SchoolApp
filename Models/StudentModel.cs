@@ -1,14 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace SchoolApp.Models
 {
-    public class StudentModel
+    public class StudentModel : Person
     {
-        public string RequestId { get; set; }
+        public string StudentId { get; set; }
 
-        public bool ShowRequestId => !string.IsNullOrEmpty(RequestId);
+        public string Class{ get; set; }
+
+        public string  Section { get; set; }
+        public bool ShowStudentId => !string.IsNullOrEmpty(StudentId);
+
+        public StudentModel(): base()
+        {
+
+        }
     }
 }

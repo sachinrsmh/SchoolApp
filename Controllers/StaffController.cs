@@ -7,31 +7,29 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace SchoolApp.Controllers
 {
-    public class StudentController : Controller
+    public class StaffController : Controller
     {
-        // GET: Student
-        //[Route("Student/Student")]
+        // GET: Staff
         public ActionResult Index()
         {
-            //return View(@"Student/Student.cshtml");
-            return View("Student"); 
+            return View();
         }
 
-        // GET: Student/Details/5
+        // GET: Staff/Details/5
         public ActionResult Details(int id)
         {
             return View();
         }
 
-        // GET: Student/Create
+        // GET: Staff/Create
         public ActionResult Create()
         {
-            return View("Student");
+            return View();
         }
 
-        // POST: Student/Create
+        // POST: Staff/Create
         [HttpPost]
-     //   [ValidateAntiForgeryToken]
+        [ValidateAntiForgeryToken]
         public ActionResult Create(IFormCollection collection)
         {
             try
@@ -46,13 +44,13 @@ namespace SchoolApp.Controllers
             }
         }
 
-        // GET: Student/Edit/5
+        // GET: Staff/Edit/5
         public ActionResult Edit(int id)
         {
             return View();
         }
 
-        // POST: Student/Edit/5
+        // POST: Staff/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit(int id, IFormCollection collection)
@@ -69,13 +67,13 @@ namespace SchoolApp.Controllers
             }
         }
 
-        // GET: Student/Delete/5
+        // GET: Staff/Delete/5
         public ActionResult Delete(int id)
         {
             return View();
         }
 
-        // POST: Student/Delete/5
+        // POST: Staff/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Delete(int id, IFormCollection collection)
